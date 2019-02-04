@@ -18,7 +18,6 @@ form.addEventListener('submit', function(e){
     let pattern = /\s/g;
     
     var card_number = inputValue.replace(pattern, '');
-    // console.log(card_number)
 
     }
     else{
@@ -31,8 +30,6 @@ form.addEventListener('submit', function(e){
     resultContainer.innerHTML = `<p>${inputValue} is  not valid  \u{1F641} \u{1F915}</p>` ;
 
 })
-
-
 
 
 const isLuhn = number => {
@@ -75,7 +72,6 @@ const isLuhn = number => {
         return result%10 === 0 ? true : false;
 }
 
-// console.log(isLuhn(card_number))
  
 
 

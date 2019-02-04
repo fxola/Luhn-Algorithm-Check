@@ -35,40 +35,50 @@ form.addEventListener('submit', function(e){
 const isLuhn = number => {
     let individualNumbers = number.split('');
 
-    // get sum of digits at odd index positions from the right, starting from the check digit
-    const checkDigitSum = individualNumbers.reduceRight((acc,num,i)=>{
-        if(i%2 !== 0){
-        return  acc + parseInt(num)
+    // get sum of digits at even index positions from the right, starting from the check digit
+    const evenPositionSum = individualNumbers.reduceRight((acc,num,i)=>{
+        
+        if(i%2 === 0){
+
+            return  acc + parseInt(num);
         }
+
         return acc
             
     }, 0)
 
     //split the param into atomic bits and add the atomic bits
     const processNum = num => {
+
         let bit = num.split('');
-
         let bitSum = bit.reduce((acc,val)=> acc + parseInt(val), 0);
-
         return bitSum;
+
     }
 
-    // get sum of the product of digits times two(2) at even index positions from the right
-    const evenPositionSum = individualNumbers.reduceRight((acc,num,i) => {
+    // get sum of the product of digits times two(2) at odd index positions from the right
+    const oddPositionSum = individualNumbers.reduceRight((acc,num,i) => {
+            
+                if(i%2 !==0){
 
-                if(i%2 ==0){
                     if(num*2 > 9){
-                    return acc + processNum((String(num*2)))
+
+                        return acc + processNum((String(num*2)));
                     }
                     else{
+
                         return acc + parseInt(num*2);
+
                     }
                 }
+
                 return acc;
         }, 0)
 
-        let result  = evenPositionSum + checkDigitSum;
+        let result  = evenPositionSum + oddPositionSum;
+
         console.log(result)
+     
         return result%10 === 0 ? true : false;
 }
 

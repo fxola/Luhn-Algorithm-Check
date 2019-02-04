@@ -17,12 +17,12 @@ form.addEventListener('submit', function(e){
      //strip whitespace from input
     let pattern = /\s/g;
     
-    var card_number = inputValue.replace(pattern, '');
+    let card_number = inputValue.replace(pattern, '');
     // console.log(card_number)
 
     }
     else{
-        alert('invalid input'); 
+        alert('invalid input, number should not be less than 2 digits'); 
     }
 
     //set the html content to be displayed based on the validity of the card number

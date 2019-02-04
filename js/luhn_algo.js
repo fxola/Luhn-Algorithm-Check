@@ -17,7 +17,7 @@ form.addEventListener('submit', function(e){
      //strip whitespace from input
     let pattern = /\s/g;
     
-    var card_number = inputValue.replace(pattern, '');
+    let card_number = inputValue.replace(pattern, '');
     // console.log(card_number)
 
     }

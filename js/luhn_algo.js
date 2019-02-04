@@ -22,7 +22,7 @@ form.addEventListener('submit', function(e){
 
     }
     else{
-        alert('invalid input'); 
+        alert('invalid input, number should not be less than 2 digits'); 
     }
 
     //set the html content to be displayed based on the validity of the card number

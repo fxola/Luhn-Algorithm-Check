@@ -1,30 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>&#x1F4B3; &#x1F4B3; Luhn algorithm check</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
     <section>
-        <h1>Verify Your Credit Card/Social Insurance Number</h1>
-        <article id="form">
-            <form action="">
-                <input type="text" 
-                    id="number" 
-                    title ="please enter a valid number. number should not be less than 2 digits"
-                    pattern = "(\d{2,})(\s)?(\d{3,4})?(\s)?(\d{3,4})?(\s)?(\d{3,4})?(\s)?"
-                    required
-                    placeholder="please enter a number to verify">
-                <button type="submit" id="submit">Check &#x1F9D0;</button>
-            </form>
-        </article>
+      <h1>Verify Your Credit Card</h1>
+      <article id="form">
+        <form action="">
+          <input
+            type="text"
+            id="number"
+            title="please enter a valid number. number should not be less than 2 digits"
+            pattern="(\d{2,})(\s)?(\d{3,4})?(\s)?(\d{3,4})?(\s)?(\d{3,4})?(\s)?"
+            required
+            placeholder="please enter a number to verify"
+          />
+          <button type="submit" id="submit">Check &#x1F9D0;</button>
+        </form>
+      </article>
 
-        <article id ="result">
-        </article>
+      <article id="result"></article>
     </section>
     <script src="js/luhn_algo.js"></script>
-</body>
+  </body>
 </html>
